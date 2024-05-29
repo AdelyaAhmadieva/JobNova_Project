@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "N0hVVZwJxbuQigx+pcoRi32pt+ADqsVSbnxfo1PJx2M=",
+  "Source": "JobNova.Api",
+  "BasePath": "_content/JobNova.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
