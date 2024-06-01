@@ -48,10 +48,12 @@ const userEmployerSlice = createSlice({
 
 export const getEmployerData = createAsyncThunk(
     "userEmployerSlice/getEmployerData",async () =>{
-        var response = await axios.get("http://localhost:5259/getEmployer",
+        var response = await axios.get("http://localhost:5259/employer",
             {
                 headers:{
                     "Authorization": "Bearer " + localStorage.getItem("token")
+                },
+                params:{
                 }
             });
 

@@ -150,6 +150,14 @@ namespace JobNova.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -157,8 +165,31 @@ namespace JobNova.DataAccess.Migrations
                     b.Property<Guid>("EmployerId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("Salary")
+                    b.Property<string>("Experience")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Industry")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("JobCategory")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("JobType")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("MaxSalary")
                         .HasColumnType("integer");
+
+                    b.Property<int?>("MinSalary")
+                        .HasColumnType("integer");
+
+                    b.Property<List<string>>("RequiredSkills")
+                        .IsRequired()
+                        .HasColumnType("text[]");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -168,7 +199,7 @@ namespace JobNova.DataAccess.Migrations
 
                     b.HasIndex("EmployerId");
 
-                    b.ToTable("VacancyEntity");
+                    b.ToTable("Vacancies");
                 });
 
             modelBuilder.Entity("JobNova.DataAccess.Entities.ResumeEntity", b =>

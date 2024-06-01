@@ -169,11 +169,4 @@ public class CandidateController : ControllerBase
         return Ok("Candidate updated");
     }
 }
-        
-        
-    /*
-    public async Task<ActionResult<>>
-    
-    public async Task<ActionResult<>>
-    */
-
+ 

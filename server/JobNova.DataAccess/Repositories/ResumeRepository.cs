@@ -58,4 +58,5 @@ public class ResumeRepository : IResumeRepository
         return data.Select(x => new Resume(x.Id, x.Description, x.CandidateId, x.Skills)).ToList();
     }
     
+    
 }

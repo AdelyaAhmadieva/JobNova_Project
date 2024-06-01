@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JobNova.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b99196271a0f912724d99cbbf7f60724b5f330c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f15b3244f956ef7d50cb9672a9dab498cc77e2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("JobNova.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JobNova.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

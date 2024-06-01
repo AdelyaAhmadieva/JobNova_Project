@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Api\\JobNova.Api.csproj": {}
+    "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Api\\JobNova.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Api\\JobNova.Api.csproj": {
+    "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Api\\JobNova.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Api\\JobNova.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Api\\JobNova.Api.csproj",
         "projectName": "JobNova.Api",
-        "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Api\\JobNova.Api.csproj",
+        "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Api\\JobNova.Api.csproj",
         "packagesPath": "C:\\Users\\Adelya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Api\\obj\\",
+        "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Adelya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,14 +28,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Application\\JobNova.Application.csproj": {
-                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Application\\JobNova.Application.csproj"
+              "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Application\\JobNova.Application.csproj": {
+                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Application\\JobNova.Application.csproj"
               },
-              "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj": {
-                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj"
+              "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj": {
+                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj"
               },
-              "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj"
+              "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj"
               }
             }
           }
@@ -55,6 +55,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -93,14 +97,14 @@
         }
       }
     },
-    "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Application\\JobNova.Application.csproj": {
+    "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Application\\JobNova.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Application\\JobNova.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Application\\JobNova.Application.csproj",
         "projectName": "JobNova.Application",
-        "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Application\\JobNova.Application.csproj",
+        "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Application\\JobNova.Application.csproj",
         "packagesPath": "C:\\Users\\Adelya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Application\\obj\\",
+        "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Adelya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -117,8 +121,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj": {
-                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj"
+              "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj": {
+                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj"
               }
             }
           }
@@ -157,14 +161,14 @@
         }
       }
     },
-    "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj": {
+    "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj",
         "projectName": "JobNova.Core",
-        "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj",
+        "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj",
         "packagesPath": "C:\\Users\\Adelya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\obj\\",
+        "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Adelya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -227,14 +231,14 @@
         }
       }
     },
-    "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj": {
+    "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj",
         "projectName": "JobNova.DataAccess",
-        "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj",
+        "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj",
         "packagesPath": "C:\\Users\\Adelya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Adelya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -251,8 +255,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj": {
-                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj"
+              "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj": {
+                "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj"
               }
             }
           }

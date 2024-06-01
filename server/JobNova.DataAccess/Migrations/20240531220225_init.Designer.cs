@@ -13,7 +13,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace JobNova.DataAccess.Migrations
 {
     [DbContext(typeof(JobNovaDbContext))]
-    [Migration("20240527223146_init")]
+    [Migration("20240531220225_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -153,6 +153,14 @@ namespace JobNova.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
@@ -160,8 +168,31 @@ namespace JobNova.DataAccess.Migrations
                     b.Property<Guid>("EmployerId")
                         .HasColumnType("uuid");
 
-                    b.Property<int>("Salary")
+                    b.Property<string>("Experience")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Industry")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("JobCategory")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("JobType")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int?>("MaxSalary")
                         .HasColumnType("integer");
+
+                    b.Property<int?>("MinSalary")
+                        .HasColumnType("integer");
+
+                    b.Property<List<string>>("RequiredSkills")
+                        .IsRequired()
+                        .HasColumnType("text[]");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -171,7 +202,7 @@ namespace JobNova.DataAccess.Migrations
 
                     b.HasIndex("EmployerId");
 
-                    b.ToTable("VacancyEntity");
+                    b.ToTable("Vacancies");
                 });
 
             modelBuilder.Entity("JobNova.DataAccess.Entities.ResumeEntity", b =>

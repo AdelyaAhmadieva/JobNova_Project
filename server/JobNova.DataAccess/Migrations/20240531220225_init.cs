@@ -76,20 +76,28 @@ namespace JobNova.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "VacancyEntity",
+                name: "Vacancies",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    Salary = table.Column<int>(type: "integer", nullable: false),
+                    JobType = table.Column<string>(type: "text", nullable: false),
+                    JobCategory = table.Column<string>(type: "text", nullable: false),
+                    MinSalary = table.Column<int>(type: "integer", nullable: true),
+                    MaxSalary = table.Column<int>(type: "integer", nullable: true),
+                    RequiredSkills = table.Column<List<string>>(type: "text[]", nullable: false),
+                    Experience = table.Column<string>(type: "text", nullable: false),
+                    Industry = table.Column<string>(type: "text", nullable: false),
+                    Address = table.Column<string>(type: "text", nullable: false),
+                    Country = table.Column<string>(type: "text", nullable: false),
                     EmployerId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_VacancyEntity", x => x.Id);
+                    table.PrimaryKey("PK_Vacancies", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_VacancyEntity_Employers_EmployerId",
+                        name: "FK_Vacancies_Employers_EmployerId",
                         column: x => x.EmployerId,
                         principalTable: "Employers",
                         principalColumn: "Id",
@@ -102,8 +110,8 @@ namespace JobNova.DataAccess.Migrations
                 column: "CandidateId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_VacancyEntity_EmployerId",
-                table: "VacancyEntity",
+                name: "IX_Vacancies_EmployerId",
+                table: "Vacancies",
                 column: "EmployerId");
         }
 
@@ -114,7 +122,7 @@ namespace JobNova.DataAccess.Migrations
                 name: "Resumes");
 
             migrationBuilder.DropTable(
-                name: "VacancyEntity");
+                name: "Vacancies");
 
             migrationBuilder.DropTable(
                 name: "Candidates");

@@ -21,5 +21,6 @@ public class EmployerConfiguration
         builder.Property(x => x.Website);
         builder.Property(x => x.Story);
         builder.Property(x => x.EmailToConnect);
+        builder.Property(x => x.Vacancies).IsRequired();
     }
 }

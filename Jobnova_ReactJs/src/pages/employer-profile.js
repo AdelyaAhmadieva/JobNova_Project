@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link, useParams } from "react-router-dom";
 
 import bg1 from "../assets/images/hero/bg4.jpg"
@@ -14,11 +14,55 @@ import ScrollTop from "../componants/scrollTop";
 import { jobData } from "../data/data";
 
 import {FiMapPin, FiClock, FiDollarSign, FiDribbble, FiLinkedin, FiFacebook, FiInstagram, FiTwitter,} from "../assets/icons/vander"
+import axios from "axios";
 
 export default function EmployerProfile(){
     let params = useParams()
     let id = params.id
     let data = jobData.find((job)=>job.id === parseInt(id))
+
+    const [employerName, setEmployerName] = useState("");
+    const [employerEmail, setEmployerEmail] = useState("");
+    const [founder, setFounder] = useState("");
+    const [foundingDate, setFoundingDate] = useState("");
+    const [address, setAddress] = useState("");
+    const [numberOfEmployees, setNumberOfEmployees] = useState("");
+    const [employerWebsite, setEmployerWebsite] = useState("");
+    const [story, setStory] = useState("");
+    const [emailToConnect, setEmailToConnect] = useState("");
+    const [vacancies, setVacancies] = useState([]);
+
+    async function getEmployerData(){
+        const response = await axios.get("http://localhost:5259/getEmployerInformation", {
+            headers:{
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + localStorage.getItem("token"),
+            },
+            params:{
+                id: params.id
+            }
+
+        })
+
+        const data = response.data;
+
+        setEmployerName(data.employerName)
+        setEmployerEmail(data.email)
+        setFounder(data.founder)
+        setFoundingDate(data.foundingData)
+        setAddress(data.address)
+        setNumberOfEmployees(data.numberOfEmployees)
+        setEmployerWebsite(data.website)
+        setStory(data.story)
+        setEmailToConnect(data.emailToConnect)
+        setVacancies(data.vacancies)
+
+    }
+    useEffect(() => {
+        getEmployerData()
+    },[])
+
+
     return(
         <>
         <Navbar navClass="defaultscroll sticky" navLight={true}/>
@@ -43,7 +87,7 @@ export default function EmployerProfile(){
                                     <img src={data?.image ? data.image : logo1} className="avatar avatar-md-md rounded shadow p-3 bg-white" alt=""/>
 
                                     <div className="ms-3">
-                                        <h5>{data?.name ? data.name : 'Lenovo'}</h5>
+                                        <h5>{employerName || "DDDd"}</h5>
                                         <span className="text-muted d-flex align-items-center"><FiMapPin className="fea icon-sm me-1"/>{data?.city ? data.city : 'Canberra'}, Australia</span>
                                     </div>
                                 </div>
@@ -63,8 +107,7 @@ export default function EmployerProfile(){
                     <div className="col-lg-8 col-md-7 col-12">
                         <h4 className="mb-4">Company Story:</h4>
 
-                        <p className="text-muted">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed.</p>
-                        <p className="text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage.</p>
+                        <p className="text-muted">{story}</p>
 
                         <div className="row g-4">
                             <div className="col-12"><img src={image1} className="rounded shadow img-fluid" alt=""/></div>
@@ -75,18 +118,16 @@ export default function EmployerProfile(){
                         <h4 className="my-4">Vacancies:</h4>
 
                         <div className="row g-4">
-                            {jobData.slice(0,4).map((item,index)=>{
+                            {vacancies?.map((item,index)=>{
                                 return(
                                     <div className="col-lg-6 col-12" key={index}>
                                         <div className="job-post rounded shadow bg-white">
                                             <div className="p-4">
-                                                <Link to={`/job-detail-one/${item.id}`} className="text-dark title h5">{item.title}</Link>
-
-                                                <p className="text-muted d-flex align-items-center small mt-3"><FiClock className="fea icon-sm text-primary me-1"/>Posted {item.posted} Days ago</p>
+                                                <Link to={`/job-detail-one/${item.id}/vacancies/${item.employerId}`} className="text-dark title h5">{item.title}</Link>
 
                                                 <ul className="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                                    <li className="list-inline-item"><span className="badge bg-soft-primary">{item.jobTime}</span></li>
-                                                    <li className="list-inline-item"><span className="text-muted d-flex align-items-center small"><FiDollarSign className="fea icon-sm text-primary me-1"/>{item.salary}/mo</span></li>
+                                                    <li className="list-inline-item"><span className="badge bg-soft-primary">{item.jobType}</span></li>
+                                                    <li className="list-inline-item"><span className="text-muted d-flex align-items-center small"><FiDollarSign className="fea icon-sm text-primary me-1"/>{item.minSalary}/mo</span></li>
                                                 </ul>
                                             </div>
                                             <div className="d-flex align-items-center p-4 border-top">

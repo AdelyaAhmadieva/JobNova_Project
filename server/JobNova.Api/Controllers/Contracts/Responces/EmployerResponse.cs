@@ -13,6 +13,6 @@ public record EmployerResponse
     string? website,
     string? story,
     string? emailToConnect,
-    ICollection<Vacancy?> vacancies)
+    List<VacancyResponce?> vacancies)
 {
 }

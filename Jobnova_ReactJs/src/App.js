@@ -87,7 +87,7 @@ function App() {
           (<>
              <Route path='/job-categories' element={<JobCategories/>}/>
              <Route path='/jobs' element={<JobListTwo/>}/>
-             <Route path='/job-detail-one/:id' element={<JobDetailOne/>}/>
+             <Route path='/job-detail-one/:id/vacancies/:employerId' element={<JobDetailOne/>}/>
              <Route path='/job-apply/:id' element={<JobApply/>}/>
              <Route path='/employers' element={<Employers/>}/>
              <Route path='/employer-profile/:id' element={<EmployerProfile/>}/>

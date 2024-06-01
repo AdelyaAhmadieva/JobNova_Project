@@ -369,11 +369,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj",
       "projectName": "JobNova.Core",
-      "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj",
+      "projectPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj",
       "packagesPath": "C:\\Users\\Adelya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\obj\\",
+      "outputPath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Adelya\\AppData\\Roaming\\NuGet\\NuGet.Config",

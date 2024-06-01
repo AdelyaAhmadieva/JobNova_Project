@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link, useParams } from "react-router-dom";
 
 import logo1 from "../assets/images/company/lenovo-logo.png"
@@ -10,11 +10,51 @@ import ScrollTop from "../componants/scrollTop";
 
 import {FiLayout, FiMapPin,FiUserCheck, FiClock, FiMonitor, FiBriefcase, FiBook, FiDollarSign, FiArrowRight} from "../assets/icons/vander"
 import { jobData } from "../data/data";
+import axios from "axios";
+import {useSelector} from "react-redux";
 
 export default function JobDetailOne(){
     let params = useParams();
     let id = params.id
+    let employerId = params.employerId
     let data = jobData.find((job)=>job.id === parseInt(id));
+
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [jobType, setJobType] = useState("");
+    const [jobCategory, setJobCategory] = useState("");
+    const [minSalary, setMinSalary] = useState(null);
+    const [maxSalary, setMaxSalary] = useState(null);
+    const [skills, setSkills] = useState([{name: "HTML", id: 1}]);
+    const [qualification, setQualification] = useState("");
+    const [experience, setExperience] = useState("");
+    const [industry, setIndustry] = useState("");
+    const [address, setAddress] = useState("");
+    const [country, setCountry] = useState("Расея");
+
+    async function getEmployerData(){
+        const response = await axios.get("http://localhost:5259/getEmployerInformation", {
+            headers:{
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + localStorage.getItem("token"),
+            },
+            params:{
+                id: params.employerId
+            }
+
+        })
+
+        const data = response.data;
+        let vacancy=data.vacancies.find(x => x.id === id)
+        setTitle(vacancy.title)
+        console.log("Vacancy",vacancy)
+
+    }
+    useEffect(() => {
+        getEmployerData()
+    },[])
+
+
 
     return(
         <>
@@ -27,7 +67,7 @@ export default function JobDetailOne(){
                     <div className="col-12">
                         <div className="title-heading text-center">
                             <img src={data?.image ? data.image : logo1} className="avatar avatar-small rounded-pill p-2 bg-white" alt=""/>
-                            <h5 className="heading fw-semibold mb-0 sub-heading text-white title-dark mt-3">{data?.title ? data.title : 'Back-End Developer'}</h5>
+                            <h5 className="heading fw-semibold mb-0 sub-heading text-white title-dark mt-3">{title || 'Back-End Developer'}</h5>
                         </div>
                     </div>
                 </div>

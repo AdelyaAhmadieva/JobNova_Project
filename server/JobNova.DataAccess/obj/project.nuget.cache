@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wIGNC61PjbrX0+RlfaXJ6NO5tIt5JMM+0vWAZFa2GvXDF4AMv7KEzhIU2D0h6xnVT+rkjvxpMFayqpf8vOE7EA==",
+  "dgSpecHash": "k/8L9UiM+nz8v54w4C340W8lQPmRSBPT/kgi/BEjRuTwQg+Tz0dCOEjKkVX927XCFdx5PaBN0ozzLa/OHEwDqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.DataAccess\\JobNova.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Adelya\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Adelya\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -23,3 +23,16 @@ C:\Users\Adelya\_repos\JobNova\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core
 C:\Users\Adelya\_repos\JobNova\server\JobNova.Core\obj\Debug\net8.0\refint\JobNova.Core.dll
 C:\Users\Adelya\_repos\JobNova\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.pdb
 C:\Users\Adelya\_repos\JobNova\server\JobNova.Core\obj\Debug\net8.0\ref\JobNova.Core.dll
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\bin\Debug\net8.0\JobNova.Core.deps.json
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\bin\Debug\net8.0\JobNova.Core.dll
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\bin\Debug\net8.0\JobNova.Core.pdb
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.csproj.AssemblyReference.cache
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.AssemblyInfoInputs.cache
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.AssemblyInfo.cs
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.csproj.CoreCompileInputs.cache
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.sourcelink.json
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.dll
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\refint\JobNova.Core.dll
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\JobNova.Core.pdb
+C:\Users\Adelya\_repos\JobNova_Project\server\JobNova.Core\obj\Debug\net8.0\ref\JobNova.Core.dll

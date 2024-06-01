@@ -16,9 +16,9 @@ public class JobNovaDbContext : DbContext
     public DbSet<ResumeEntity> Resumes { get; set; }
     
     public DbSet<EmployerEntity> Employers { get; set; }
-
- //   public DbSet<VacancyEntity> Vacancies { get; set; }
-   // public DbSet<EmployerEntity> Employers { get; set; }
+    
+    public DbSet<VacancyEntity> Vacancies { get; set; }
+   
 
     
 
@@ -35,18 +35,19 @@ public class JobNovaDbContext : DbContext
                 .WithOne(x => x.CandidateEntity)
                 .HasForeignKey(x => x.CandidateId);
             
-            //Конфигурация нанимателя
-            modelBuilder.Entity<EmployerEntity>()
-                .HasMany(x => x.Vacancies)
-                .WithOne(x => x.EmployerEntity)
-                .HasForeignKey(x => x.EmployerId);
-            
             //Конфигурация резюме
             modelBuilder.Entity<ResumeEntity>()
                 .HasOne(x => x.CandidateEntity)
                 .WithMany(x => x.Resumes)
                 .HasForeignKey(x => x.CandidateId);
+
             
+            
+            //Конфигурация нанимателя
+            modelBuilder.Entity<EmployerEntity>()
+                .HasMany(x => x.Vacancies)
+                .WithOne(x => x.EmployerEntity)
+                .HasForeignKey(x => x.EmployerId);
             
             //Конфигурация вакансии
             modelBuilder.Entity<VacancyEntity>()

@@ -12,6 +12,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getCandidateData, updateCandidateData} from "../store/userCandidateSlice";
 import {getEmployerData, updateEmployerData} from "../store/userEmployerSlice";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export default function CandidateProfileSetting(){
     let [file, setFile] = useState(image1);
@@ -153,35 +154,40 @@ export default function CandidateProfileSetting(){
     }
 
     function setCandidateData(){
-        setFirstName(userCandidate.firstName)
-        setLastName(userCandidate.lastName)
-        setEmail(user.email)
-        setIntroduction(userCandidate.introduction)
-        setPhone(userCandidate.phoneNumber)
-        setWebsite(userCandidate.website)
+        dispatch(getCandidateData()).then((res) => {
+            console.log(userCandidate.firstName)
+            setFirstName(res.payload.firstName)
+            setLastName(res.payload.lastName)
+            setEmail(user.email)
+            setIntroduction(res.payload.introduction)
+            setPhone(res.payload.phoneNumber)
+            setWebsite(res.payload.website)
+        })
     }
     function setEmployerData(){
-        setEmployerName(userEmployer.employerName)
-        setEmployerEmail(user.email)
-        setFounder(userEmployer.founder)
-        setFoundingDate(userEmployer.foundingData)
-        setAddress(userEmployer.address)
-        setNumberOfEmployees(userEmployer.numberOfEmployees)
-        setEmployerWebsite(userEmployer.website)
-        setStory(userEmployer.story)
-        setEmailToConnect(userEmployer.emailToConnect)
-        setVacancies(userEmployer.vacancies)
 
+        dispatch(getEmployerData()).then((res) => {
+            console.log(res)
+            setEmployerName(res.payload.employerName)
+            setEmployerEmail(user.email)
+            setFounder(res.payload.founder)
+            setFoundingDate(res.payload.foundingData)
+            setAddress(res.payload.address)
+            setNumberOfEmployees(res.payload.numberOfEmployees)
+            setEmployerWebsite(res.payload.website)
+            setStory(res.payload.story)
+            setEmailToConnect(res.payload.emailToConnect)
+            setVacancies(res.payload.vacancies)
+        })
     }
 
 
     useEffect(() => {}, [skillSet])
     useEffect(() => {
-        console.log(userEmployer.employerName)
-        if(user.role === "Candidate"){
+        if(user.role === "Candidate") {
             setCandidateData()
         }
-        if(user.role === "Employer"){
+        if (user.role === "Employer"){
             setEmployerData()
         }
     },[])
@@ -615,9 +621,12 @@ export default function CandidateProfileSetting(){
                                             </div>
                                         </div>
 
-                                        <div className="ms-2">
-                                            <h5 className="mb-0">{employerName}</h5>
-                                            <p className="text-muted mb-0">{user.email}</p>
+                                        <div className="ms-2 d-flex flex-row align-items-end gap-5">
+                                            <div>
+                                                <h5 className="mb-0">{employerName}</h5>
+                                                <p className="text-muted mb-0">{user.email}</p>
+                                            </div>
+                                            <Link to="/job-post"><button className="btn btn-primary">Create Vacancy</button></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -691,13 +700,11 @@ export default function CandidateProfileSetting(){
                                             <div className="col-md-6">
                                                 <div className="mb-3">
                                                     <label className="form-label fw-semibold">Amount of employees:</label>
-                                                    <select className="form-control form-select" id="Type">
+                                                    <select value={numberOfEmployees || 0} onChange={event => setNumberOfEmployees(event.target.value)}
+                                                        className="form-control form-select" id="Type">
                                                         {/*map option from options state of sth*/}
-                                                        <option value={numberOfEmployees} onSelect={event => setNumberOfEmployees(event.target.value)}>{"Over 10"}</option>
-                                                        <option value={numberOfEmployees} onSelect={event => setNumberOfEmployees(event.target.value)}>{"Over 50"}</option>
-                                                        <option value={numberOfEmployees} onSelect={event => setNumberOfEmployees(event.target.value)}>{"Over 100"}</option>
-                                                        <option value={numberOfEmployees} onSelect={event => setNumberOfEmployees(event.target.value)}>{"Over 300"}</option>
-                                                        <option value={numberOfEmployees} onSelect={event => setNumberOfEmployees(event.target.value)}>{"Over 1000"}</option>
+                                                        <option value={10}>{"Over 10"}</option>
+                                                        <option value={1000}>{"Over 1000"}</option>
 
 
                                                     </select>

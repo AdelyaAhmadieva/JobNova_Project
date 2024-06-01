@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NawSpkBoeNRNLjkk7MLseDBi+hT/x06iJ4V6PhaaIOMrOZkmNH8DpHYe+eTbmvT4pBfAE1P85gRLgdD6yh4d+w==",
+  "dgSpecHash": "0diSclEdtTwHrYS0lVb4WMhejlo9Rndv4oMB+2T/74vxJmiEWNA9SSBID2NHZzq0icITsPUSruq5ulWby/iszA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Adelya\\_repos\\JobNova\\server\\JobNova.Core\\JobNova.Core.csproj",
+  "projectFilePath": "C:\\Users\\Adelya\\_repos\\JobNova_Project\\server\\JobNova.Core\\JobNova.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Adelya\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Adelya\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.3\\microsoft.aspnetcore.authentication.jwtbearer.8.0.3.nupkg.sha512",

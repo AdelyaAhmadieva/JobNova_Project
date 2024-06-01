@@ -8,7 +8,7 @@ public class EmployerEntity
     public string Role { get; set; } = string.Empty;
     public string? PasswordHash { get; set; } = string.Empty;
 
-    public ICollection<VacancyEntity> Vacancies { get; set; } = new List<VacancyEntity>();
+    public ICollection<VacancyEntity> Vacancies { get; } = new List<VacancyEntity>();
     
     public string Founder { get; set; } = string.Empty;
     public string FoundingDate { get; set; } = string.Empty;
